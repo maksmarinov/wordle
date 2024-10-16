@@ -37,6 +37,7 @@ button {
     width: 20px;
     height: 40px;
     color: black;
+    border: none;
     margin: 2px;
     background-color: rgb(113, 141, 97);
 }
