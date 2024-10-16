@@ -10,6 +10,7 @@ body {
     margin-top: 20px;
     max-height: 550px;
     max-width: 350px;
+    border: 2px solid aqua;
 }
 
 .attempts {
@@ -27,12 +28,12 @@ body {
 }
 
 .keyboard {
-    border: 2px solid rgb(255, 0, 149);
+    border: 2px solid rgba(0, 212, 18, 0.432);
     margin-top: 5%;
 }
 
 button {
-    height: 40px;
+    height: auto;
     width: auto;
     color: black;
     margin: 2px;
