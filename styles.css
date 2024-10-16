@@ -47,13 +47,14 @@ body {
         ". . . . . . . . . ."
         "backs backs . . . . . . enter enter"
     ; */
-    border: 2px solid rgb(207, 25, 86);
+    border: 2px solid rgb(243, 255, 79);
     margin-top: 5%;
 
 
 }
 
 button {
+    display: inline-block;
     width: 35px;
     height: 40px;
     color: black;
