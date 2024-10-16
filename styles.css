@@ -7,7 +7,6 @@ body {
 
 .main {
     margin-top: 20px;
-
     max-height: 550px;
     max-width: 350px;
 }
@@ -32,30 +31,16 @@ body {
     background-color: #161616;
 }
 
-.colors {
-    color: #976700;
-}
-
 .keyboard {
-    display: inline-block;
-    margin-left: 5%;
-    width: 85%;
+    justify-content: center;
     text-align: center;
-    /* grid-template-areas:
-        ". . . . . . . . . ."
-
-        ". . . . . . . . . ."
-        "backs backs . . . . . . enter enter"
-    ; */
-    border: 2px solid rgb(243, 255, 79);
+    border: 2px solid rgb(148, 9, 90);
     margin-top: 5%;
 
 
 }
 
 button {
-    display: inline-block;
-    width: 35px;
     height: 40px;
     color: black;
     margin: 2px;
@@ -66,13 +51,11 @@ button {
 }
 
 .backs {
-    grid-area: backs;
     background-color: rgb(90, 116, 30);
-
+    width: 12%;
 }
 
 .enter {
-    grid-area: enter;
     background-color: rgb(90, 116, 30);
-
+    width: 12%
 }
