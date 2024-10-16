@@ -54,7 +54,7 @@ body {
 }
 
 button {
-    width: 18px;
+    width: 20px;
     height: 40px;
     color: black;
     margin: 2px;
@@ -67,26 +67,11 @@ button {
 .backs {
     grid-area: backs;
     background-color: rgb(90, 116, 30);
-    width: 63px;
+    width: 42px;
 }
 
 .enter {
     grid-area: enter;
     background-color: rgb(90, 116, 30);
-    width: 63px;
-}
-
-@media screen and (max-width: 960px) {
-
-    button {
-        width: 20px;
-    }
-
-    .backs {
-        width: 42px;
-    }
-
-    .enter {
-        width: 42px;
-    }
+    width: 42px;
 }
