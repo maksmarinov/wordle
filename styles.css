@@ -75,3 +75,10 @@ button {
     background-color: rgb(90, 116, 30);
     width: 63px;
 }
+
+@media screen and (max-width: 400px) {
+
+    button {
+        width: 20px;
+    }
+}
