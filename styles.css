@@ -1,4 +1,6 @@
 body {
+    padding: 0;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,8 +9,8 @@ body {
 }
 
 .main {
-    max-height: 900px;
-    max-width: 350px;
+    max-height: 2000px;
+    max-width: 1000px;
 }
 
 .attempts {
@@ -26,10 +28,7 @@ body {
 }
 
 .keyboard {
-    width: 95%;
     margin-top: 10%;
-    margin-left: 2%;
-
 }
 
 button {
@@ -44,10 +43,10 @@ button {
 
 .backs {
     background-color: rgb(90, 116, 30);
-    width: 25px;
+    width: 30px;
 }
 
 .enter {
-    background-color: rgb(90, 116, 30);
-    width: 25px;
+    background-color: rgb(116, 30, 102);
+    width: 30px;
 }
