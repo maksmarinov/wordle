@@ -5,6 +5,7 @@ body {
     text-align: center;
     background-color: rgb(39, 39, 39);
     color: whitesmoke;
+    touch-action: pan-x pan-y;
 }
 
 h1 {
@@ -20,8 +21,8 @@ h1 {
 
 .main {
     margin-top: 55px;
-    max-height: 2000px;
-    max-width: 1000px;
+    max-height: 1000px;
+    max-width: 500px;
 }
 
 .attempts {

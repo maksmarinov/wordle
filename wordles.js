@@ -93,6 +93,7 @@ async function init() {
             boxN++;
         }
         const matchesYell = testArr1.filter(element => testArr.includes(element));
+
         let x = []
         for (i = 0; i < matchesYell.length; i++) {
             let y = testArr.indexOf(matchesYell[i]);
@@ -101,6 +102,7 @@ async function init() {
                 delete testArr[y];
             }
         }
+        console.log(testArr)
         for (i = 0; i < x.length; i++) {
             let y = x[i];
             letters[y + attCounter].style.backgroundColor = '#998200';
