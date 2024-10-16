@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.attempts {
+    top: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.letter {
+    padding: 4px;
+    margin: 4px;
+    height: 50px;
+    width: 50px;
+    font-size: 45px;
+    text-align: center;
+    text-transform: capitalize;
+    caret-color: transparent;
+    border: none;
+    background-color: rgb(235, 233, 233);
+
+}
