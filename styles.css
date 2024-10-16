@@ -31,14 +31,14 @@ body {
     width: 95%;
     margin-top: 10%;
     margin-left: 2%;
-    border: 2px solid rgba(255, 255, 255, 0.603);
+    border: 2px solid rgba(226, 0, 0, 0.603);
 }
 
 button {
     width: 20px;
     height: 40px;
     color: black;
-    margin: 2px;
+    margin: auto;
     border: none;
     border-radius: 0px;
     background-color: rgb(113, 141, 97);
@@ -46,10 +46,10 @@ button {
 
 .backs {
     background-color: rgb(90, 116, 30);
-    width: 12%;
+
 }
 
 .enter {
     background-color: rgb(90, 116, 30);
-    width: 12%
+
 }
