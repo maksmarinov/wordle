@@ -34,7 +34,7 @@ body {
 .keyboard {
     justify-content: center;
     text-align: center;
-    border: 2px solid rgb(148, 9, 90);
+    border: 2px solid rgb(28, 114, 184);
     margin-top: 5%;
 
 
@@ -42,6 +42,7 @@ body {
 
 button {
     height: 40px;
+    width: 20px;
     color: black;
     margin: 2px;
     border: none;
