@@ -67,11 +67,11 @@ button {
 .backs {
     grid-area: backs;
     background-color: rgb(90, 116, 30);
-    width: 60px;
+    width: 63px;
 }
 
 .enter {
     grid-area: enter;
     background-color: rgb(90, 116, 30);
-    width: 60px;
+    width: 63px;
 }
