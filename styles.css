@@ -13,7 +13,6 @@ body {
 }
 
 .attempts {
-
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-gap: 8px;
@@ -39,14 +38,15 @@ body {
 
 .keyboard {
     display: grid;
+    margin-left: 5%;
+    width: 85%;
     grid-template-areas:
         ". . . . . . . . . ."
 
         ". . . . . . . . . ."
         "backs backs . . . . . . enter enter"
     ;
-    text-align: center;
-    justify-content: center;
+    border: 2px solid aquamarine;
     margin-top: 5%;
 
 }
@@ -54,13 +54,13 @@ body {
 button {
     width: 30px;
     height: 40px;
-    text-align: center;
     color: black;
     font-size: 20px;
     font-weight: bold;
     margin: 2px;
     border: none;
     border-radius: 0px;
+    text-align: ;
     background-color: rgb(113, 141, 97);
 }
 
@@ -80,6 +80,7 @@ button {
 
     button {
         width: 20px;
+        font-size: 15px;
     }
 
     .backs {
