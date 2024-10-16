@@ -75,7 +75,7 @@ async function init() {
         let testArr1 = [];
         for (i = 0; i < 5; i++) {
             if (myWord[i] === wordOTD[i]) {
-                letters[boxN].style.backgroundColor = '#30411f';
+                letters[boxN].style.backgroundColor = '#115204';
                 correct++;
                 testArr.push('-');
                 testArr1.push('+');
