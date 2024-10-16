@@ -47,14 +47,14 @@ body {
         ". . . . . . . . . ."
         "backs backs . . . . . . enter enter"
     ; */
-    border: 2px solid aquamarine;
+    border: 2px solid rgb(207, 25, 86);
     margin-top: 5%;
 
 
 }
 
 button {
-    width: 20px;
+    width: 35px;
     height: 40px;
     color: black;
     margin: 2px;
@@ -67,11 +67,11 @@ button {
 .backs {
     grid-area: backs;
     background-color: rgb(90, 116, 30);
-    width: 42px;
+
 }
 
 .enter {
     grid-area: enter;
     background-color: rgb(90, 116, 30);
-    width: 42px;
+
 }
