@@ -1,36 +1,40 @@
 body {
     display: flex;
+    align-items: center;
     justify-content: center;
     background-color: rgb(39, 39, 39);
 }
 
 .main {
-    width: 45%;
+    margin-top: 100px;
+    display: inline-block;
+    max-height: 600px;
+    max-width: 500px;
 }
 
 .attempts {
-    margin-top: 40%;
-    height: 450px;
-    width: 444px;
-    justify-content: center;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 8px;
     text-align: center;
-    align-items: center;
+    justify-content: center;
+
+
 }
 
-
 .letter {
-    display: inline-block;
-    padding: 4px;
-    margin: 4px;
-    height: 60px;
-    width: 60px;
-    font-size: 45px;
+    height: 80px;
+    width: 80px;
+    font-size: 69px;
     text-align: center;
+    align-items: center;
     text-transform: capitalize;
     caret-color: transparent;
     border: none;
     color: rgb(233, 233, 233);
     background-color: #161616;
+    margin: auto;
 
 }
 
@@ -39,30 +43,25 @@ body {
 }
 
 .keyboard {
-    display: inline-block;
     text-align: center;
-    margin-top: 39px;
-    width: 444px;
-    height: 150px;
-
-
-
+    grid-gap: 2px;
+    margin-top: 10%;
+    justify-content: center;
 }
 
 button {
+    height: 40px;
+    width: 40px;
+    text-align: center;
     color: black;
-    width: 38px;
-    margin-top: 2%;
-    height: 38px;
+    font-size: 23px;
+    margin: 0.5%;
     border: none;
     border-radius: 0px;
     background-color: rgb(113, 141, 97);
-    font-size: 20px;
 }
 
 .func {
-    width: 88px;
-    height: 38px;
     background-color: rgb(90, 116, 30);
-    font-size: 20px;
+    width: 18%;
 }
