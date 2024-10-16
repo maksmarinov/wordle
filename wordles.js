@@ -18,7 +18,7 @@ async function init() {
         console.log(x)
     })
     onScrnKbrd.addEventListener('click', onScrnKbrd => {
-        if (onScrnKbrd.target.innerHTML === 'Ent') {
+        if (onScrnKbrd.target.innerHTML === 'Enter') {
             if (currentGuess.length === 5) {
                 commitWord();
             }
