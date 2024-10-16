@@ -19,17 +19,16 @@ async function init() {
         console.log(x)
     })
     onScrnKbrd.addEventListener('click', onScrnKbrd => {
-
-        if (onScrnKbrd.target.innerHTML.match(/^[\p{Letter}]$/u)) {
-            inputLetters(onScrnKbrd.target.innerHTML);
-        }
-        else if (onScrnKbrd.target.innerHTML === 'Enter') {
+        if (onScrnKbrd.target.innerHTML === 'Enter') {
             if (currentGuess.length === 5) {
                 commitWord();
             }
         }
         else if (onScrnKbrd.target.innerHTML === 'Bckspc') {
             bckspace();
+        }
+        else if (onScrnKbrd.target.innerHTML.match(/^[\p{Letter}]$/u)) {
+            inputLetters(onScrnKbrd.target.innerHTML);
         }
 
     })
