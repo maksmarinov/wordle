@@ -38,13 +38,15 @@ body {
 }
 
 .keyboard {
-    display: grid;
-    grid-template-areas:
+    display: inline-block;
+    /* grid-template-areas:
+        ". . . . . . . . . ."
         ". . . . . . . . . ."
         ". . . . . . . . . ."
         "backs backs . . . . . . enter enter"
-    ;
+    ; */
     text-align: center;
+    justify-content: center;
     margin-top: 5%;
     border: 2px solid skyblue;
 }
