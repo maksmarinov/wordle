@@ -35,11 +35,12 @@ body {
 }
 
 button {
+    padding: 0;
     width: 20px;
     height: 40px;
     color: black;
-    margin: auto;
-    border: 2px solid salmon;
+    margin: 2px;
+    border: 2px solid rgb(13, 185, 190);
     background-color: rgb(113, 141, 97);
 }
 
