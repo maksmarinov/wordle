@@ -43,28 +43,29 @@ h1 {
 }
 
 button {
+    justify-content: center;
+    align-items: center;
     padding: 0;
     width: 25px;
-    height: 40px;
+    height: 35px;
+    margin-bottom: 2px;
     color: black;
     border: none;
-    margin: 2px;
-    background-color: rgb(113, 141, 97);
+    background-color: rgb(209, 221, 189);
 }
 
 .backs {
-    padding: 0;
     background-color: rgb(87, 9, 9);
     color: rgb(207, 207, 207);
-    width: 40px;
-
-
+    width: 55px;
 }
 
 .enter {
-    padding: 0;
     color: rgb(207, 207, 207);
     background-color: #115204;
-    width: 40px;
+    width: 55px;
+}
 
+.colors {
+    color: #39442b;
 }
