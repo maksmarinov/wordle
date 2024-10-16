@@ -48,7 +48,7 @@ body {
     text-align: center;
     justify-content: center;
     margin-top: 5%;
-    border: 2px solid skyblue;
+
 }
 
 button {
@@ -80,5 +80,13 @@ button {
 
     button {
         width: 20px;
+    }
+
+    .backs {
+        width: 42px;
+    }
+
+    .enter {
+        width: 42px;
     }
 }
