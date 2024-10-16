@@ -65,13 +65,12 @@ async function init() {
         let correct = 0;
         let testArr = [];
         let testArr1 = [];
-        let temp = []
         for (i = 0; i < 5; i++) {
             if (myWord[i] === wordOTD[i]) {
-                letters[boxN].style.backgroundColor = 'green';
+                letters[boxN].style.backgroundColor = '#30411f';
                 correct++;
                 testArr.push('-');
-                testArr1.push('+')
+                testArr1.push('+');
                 if (correct === 5) {
                     alert('you won!')//TODO
                 }
@@ -91,9 +90,12 @@ async function init() {
         }
         for (i = 0; i < x.length; i++) {
             let y = x[i];
-            letters[y + attCounter].style.backgroundColor = 'yellow';
+            letters[y + attCounter].style.backgroundColor = '#998200';
         }
         attCounter += 5;
+        if (attCounter === 30 && correct != 5) {
+            alert('Word was: ' + word);
+        }
     }
 }
 init();
