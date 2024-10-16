@@ -23,7 +23,7 @@ async function init() {
                 commitWord();
             }
         }
-        else if (onScrnKbrd.target.innerHTML === '⇐') {
+        else if (onScrnKbrd.target.innerHTML === 'Bckspc') {
             bckspace();
         }
         else if (onScrnKbrd.target.innerHTML.match(/^[\p{Letter}\p{Mark}]+$/u)) {
