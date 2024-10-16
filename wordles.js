@@ -32,7 +32,6 @@ async function init() {
 
     })
 
-    // ___________________________________________
     async function inputLetters(keybrdBttn) {
         if (currentGuess.length < 5) {
             currentGuess = currentGuess + keybrdBttn;
@@ -70,19 +69,6 @@ async function init() {
 
     };
 
-    // document.addEventListener('click', function kbrdHandle(event) {
-    //     if (event.target.innerText === 'Enter') {
-    //         if (currentGuess.length === 5) {
-    //             commitWord(event.target.innerText);
-    //         }
-    //     }
-    //     else if (event.target.innerText === 'Backspace') {
-    //         bckspace(event.target.innerText);
-    //     }
-    //     else if (event.target.innerText.match(/^[\p{Letter}\p{Mark}]+$/u)) {
-    //         inputLetters(event.key);
-    //     }
-    // });
     async function compareWords(wordOTD, myWord) {
         let correct = 0;
         let testArr = [];

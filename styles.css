@@ -6,10 +6,10 @@ body {
 }
 
 .main {
-    margin-top: 100px;
-    display: inline-block;
-    max-height: 600px;
-    max-width: 500px;
+    margin-top: 20px;
+
+    max-height: 550px;
+    max-width: 350px;
 }
 
 .attempts {
@@ -24,18 +24,13 @@ body {
 }
 
 .letter {
-    height: 80px;
-    width: 80px;
-    font-size: 69px;
+    height: 55px;
+    width: 55px;
+    font-size: 39px;
     text-align: center;
     align-items: center;
-    text-transform: capitalize;
-    caret-color: transparent;
-    border: none;
     color: rgb(233, 233, 233);
     background-color: #161616;
-    margin: auto;
-
 }
 
 .colors {
@@ -43,25 +38,36 @@ body {
 }
 
 .keyboard {
+    display: grid;
+    grid-template-areas:
+        ". . . . . . . . . ."
+        ". . . . . . . . . ."
+        "backs backs . . . . . . enter enter"
+    ;
     text-align: center;
-    grid-gap: 2px;
-    margin-top: 10%;
-    justify-content: center;
+    margin-top: 5%;
+    border: 2px solid skyblue;
 }
 
 button {
-    height: 40px;
-    width: 40px;
     text-align: center;
     color: black;
-    font-size: 23px;
-    margin: 0.5%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px;
     border: none;
     border-radius: 0px;
     background-color: rgb(113, 141, 97);
 }
 
-.func {
+.backs {
+    grid-area: backs;
     background-color: rgb(90, 116, 30);
-    width: 18%;
+
+}
+
+.enter {
+    grid-area: enter;
+    background-color: rgb(90, 116, 30);
+
 }
