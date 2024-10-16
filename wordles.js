@@ -7,7 +7,7 @@ let attCounter = 0;
 
 async function init() {
     let currentGuess = '';
-    let res = await fetch('https://words.dev-apis.com/word-of-the-day')
+    let res = await fetch('https://words.dev-apis.com/word-of-the-day?random=1')
     const resObj = await res.json();
     const word = resObj.word.toUpperCase();
     const wordParts = Array.from(word);
