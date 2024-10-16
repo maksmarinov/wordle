@@ -37,26 +37,26 @@ body {
 }
 
 .keyboard {
-    display: grid;
+    display: inline-block;
     margin-left: 5%;
     width: 85%;
-    grid-template-areas:
+    text-align: center;
+    /* grid-template-areas:
         ". . . . . . . . . ."
 
         ". . . . . . . . . ."
         "backs backs . . . . . . enter enter"
-    ;
+    ; */
     border: 2px solid aquamarine;
     margin-top: 5%;
+
 
 }
 
 button {
-    width: 30px;
+    width: 18px;
     height: 40px;
     color: black;
-    font-size: 20px;
-    font-weight: bold;
     margin: 2px;
     border: none;
     border-radius: 0px;
@@ -80,7 +80,6 @@ button {
 
     button {
         width: 20px;
-        font-size: 15px;
     }
 
     .backs {
