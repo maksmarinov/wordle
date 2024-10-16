@@ -39,8 +39,7 @@ button {
     height: 40px;
     color: black;
     margin: auto;
-    border: none;
-    border-radius: 0px;
+    border: 2px solid salmon;
     background-color: rgb(113, 141, 97);
 }
 
