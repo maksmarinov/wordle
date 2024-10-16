@@ -76,7 +76,7 @@ button {
     width: 63px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 960px) {
 
     button {
         width: 20px;
