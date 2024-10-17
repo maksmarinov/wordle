@@ -13,6 +13,7 @@ async function init() {
     const resObj = await res.json();
     const word = resObj.word.toUpperCase();
     const wordParts = Array.from(word);
+
     onScrnKbrd.addEventListener('touchstart', onScrnKbrd => {
         let x = onScrnKbrd.target.innerHTML;
         console.log(x)
@@ -44,6 +45,7 @@ async function init() {
             letters[counter - 1].innerText = keybrdBttn;
         }
     };
+
     async function bckspace() {
         if (counter > 0 && currentGuess.length > 0) {
             counter -= 1;
@@ -51,7 +53,7 @@ async function init() {
         currentGuess = currentGuess.slice(0, currentGuess.length - 1)
         letters[counter].innerText = '';
     };
-    console.log(word)
+
     async function validateWord(word) {
         const res = await fetch('https://words.dev-apis.com/validate-word', {
             method: 'POST',
@@ -69,15 +71,13 @@ async function init() {
             currentGuess = '';
             compareWords(wordParts, attempt);
         }
-
     }
+
     async function commitWord() {
         validateWord(currentGuess);
-
     };
 
     async function compareWords(wordOTD, myWord) {
-
         let correct = 0;
         let testArr = [];
         let testArr1 = [];
@@ -87,8 +87,6 @@ async function init() {
                 correct++;
                 testArr.push('-');
                 testArr1.push('+');
-
-
                 if (correct === 5) {
                     alert('CORRECT! \n You won!')//TODO
                     location.reload();
@@ -104,6 +102,7 @@ async function init() {
         const matchesYell = testArr1.filter(element => testArr.includes(element));
 
         let x = []
+
         for (i = 0; i < matchesYell.length; i++) {
             let y = testArr.indexOf(matchesYell[i]);
             if (y >= 0) {
@@ -115,10 +114,7 @@ async function init() {
         for (i = 0; i < x.length; i++) {
             let y = x[i];
             letters[y + attCounter].style.backgroundColor = '#998200';
-
         }
-        console.log(testArr)
-        console.log(testArr1)
 
         for (let i = 0; i < testArr.length; i++) {
             let element = testArr[i];
@@ -129,7 +125,9 @@ async function init() {
                 greyOut.style.backgroundColor = '#485c2e';
             }
         }
+
         attCounter += 5;
+
         if (attCounter === 30 && correct != 5) {
             alert('Word was: ' + word);
             location.reload();
