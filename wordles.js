@@ -115,6 +115,7 @@ async function init() {
         attCounter += 5;
         if (attCounter === 30 && correct != 5) {
             alert('Word was: ' + word);
+            location.reload();
         }
     }
 }
