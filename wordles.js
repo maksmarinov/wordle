@@ -86,7 +86,8 @@ async function init() {
                 testArr.push('-');
                 testArr1.push('+');
                 if (correct === 5) {
-                    alert('you won!')//TODO
+                    alert('CORRECT! \n You won!')//TODO
+                    location.reload();
                 }
             }
             else if (myWord[i] != wordOTD[i]) {
