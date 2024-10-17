@@ -3,7 +3,9 @@ const letters = document.querySelectorAll('.letter');
 const onScrnKbrd = document.getElementById('kbrd');
 const warning = document.getElementById('invalidWord');
 const refreshW = document.getElementById('refresh');
-const newWordLoad = document.getElementById('new')
+const newWordLoad = document.getElementById('new');
+const winner = document.getElementById('win');
+const lost = document.getElementById('loss');
 async function init() {
 
     let counter = 0;
@@ -19,9 +21,7 @@ async function init() {
     refreshW.addEventListener('click', () => {
         newWordLoad.style.visibility = 'visible';
         setTimeout(() => { newWordLoad.style.visibility = 'hidden'; }, 1000)
-        setTimeout(() => {
-            location.reload();
-        }, 1000);
+        setTimeout(() => { location.reload(); }, 1000);
     })
 
     onScrnKbrd.addEventListener('click', onScrnKbrd => {
@@ -69,8 +69,7 @@ async function init() {
         const validWord = resObj.validWord;
         if (!validWord) {
             warning.style.visibility = 'visible';
-            setTimeout(() => { warning.style.visibility = 'collapse'; }, 2000)
-
+            setTimeout(() => { warning.style.visibility = 'hidden'; }, 1200)
         }
         else {
             let attempt = Array.from(currentGuess.toUpperCase());
@@ -94,7 +93,7 @@ async function init() {
                 testArr.push('-');
                 testArr1.push('+');
                 if (correct === 5) {
-                    alert('CORRECT! \n You won!')//TODO
+                    winner.style.visibility = 'visible';//TODO
                 }
             }
             else if (myWord[i] != wordOTD[i]) {
@@ -132,7 +131,8 @@ async function init() {
         }
         attCounter += 5;
         if (attCounter === 30 && correct != 5) {
-            alert('Word was: ' + word);
+            lost.innerHTML = 'WORD WAS: ' + word;
+            lost.style.visibility = 'visible';
         }
     }
 }
