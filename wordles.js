@@ -2,6 +2,8 @@
 const letters = document.querySelectorAll('.letter');
 const onScrnKbrd = document.getElementById('kbrd');
 const warning = document.getElementById('invalidWord');
+const refreshW = document.getElementById('refresh');
+const newWordLoad = document.getElementById('new')
 async function init() {
 
     let counter = 0;
@@ -14,10 +16,14 @@ async function init() {
     const word = resObj.word.toUpperCase();
     const wordParts = Array.from(word);
 
-    onScrnKbrd.addEventListener('touchstart', onScrnKbrd => {
-        let x = onScrnKbrd.target.innerHTML;
-        console.log(x)
+    refreshW.addEventListener('click', () => {
+        newWordLoad.style.visibility = 'visible';
+        setTimeout(() => { newWordLoad.style.visibility = 'hidden'; }, 1000)
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
     })
+
     onScrnKbrd.addEventListener('click', onScrnKbrd => {
         if (onScrnKbrd.target.innerHTML === 'Enter') {
             if (currentGuess.length === 5) {
@@ -63,7 +69,7 @@ async function init() {
         const validWord = resObj.validWord;
         if (!validWord) {
             warning.style.visibility = 'visible';
-            setTimeout(() => { warning.style.visibility = 'hidden'; }, 2000)
+            setTimeout(() => { warning.style.visibility = 'collapse'; }, 2000)
 
         }
         else {
@@ -89,7 +95,6 @@ async function init() {
                 testArr1.push('+');
                 if (correct === 5) {
                     alert('CORRECT! \n You won!')//TODO
-                    location.reload();
                 }
             }
             else if (myWord[i] != wordOTD[i]) {
@@ -125,12 +130,9 @@ async function init() {
                 greyOut.style.backgroundColor = '#485c2e';
             }
         }
-
         attCounter += 5;
-
         if (attCounter === 30 && correct != 5) {
             alert('Word was: ' + word);
-            location.reload();
         }
     }
 }

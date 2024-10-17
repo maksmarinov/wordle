@@ -12,7 +12,12 @@
     <h1>?Wordle</h1>
     <script async src="wordles.js"></script>
     <div class="main">
-        <div class="inv" id="invalidWord">WORD NOT IN DINCTIONARY.</div>
+        <button id='refresh'>New Word</button>
+        <div class="inv">
+            <div class="in" id="invalidWord">WORD NOT IN DINCTIONARY.</div>
+            <div class="in" id="new">NEW WORD LOADING...</div>
+        </div>
+
         <div id="guess1" class="attempts">
             <div id="l1" class="letter"></div>
             <div id="l2" class="letter"></div>
@@ -83,7 +88,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
