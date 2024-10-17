@@ -6,6 +6,7 @@ body {
     background-color: rgb(39, 39, 39);
     color: whitesmoke;
     touch-action: pan-x pan-y;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
@@ -35,6 +36,7 @@ h1 {
     height: 55px;
     width: 55px;
     font-size: 39px;
+    padding-top: 2px;
     color: rgb(233, 233, 233);
     background-color: #161616;
 }
@@ -49,7 +51,7 @@ button {
     padding: 0;
     width: 25px;
     height: 35px;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     color: black;
     border: none;
     background-color: rgb(209, 221, 189);

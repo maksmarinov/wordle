@@ -114,11 +114,15 @@ async function init() {
             letters[y + attCounter].style.backgroundColor = '#998200';
 
         }
+        console.log(testArr)
+        console.log(testArr1)
+
         for (let i = 0; i < testArr.length; i++) {
             let element = testArr[i];
-            let test = testArr1.indexOf(element);
+            let test = wordParts.indexOf(element);
             if (element.match(/^[\p{Letter}]$/u) && test === -1) {
                 let greyOut = document.getElementById(element);
+
                 greyOut.style.backgroundColor = '#485c2e';
             }
         }
