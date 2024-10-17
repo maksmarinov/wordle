@@ -1,8 +1,6 @@
 
 const letters = document.querySelectorAll('.letter');
 const onScrnKbrd = document.getElementById('kbrd');
-const greyOutKbrd = document.querySelectorAll('.ltr');
-
 async function init() {
 
     let counter = 0;
@@ -76,6 +74,7 @@ async function init() {
     };
 
     async function compareWords(wordOTD, myWord) {
+
         let correct = 0;
         let testArr = [];
         let testArr1 = [];
@@ -85,6 +84,8 @@ async function init() {
                 correct++;
                 testArr.push('-');
                 testArr1.push('+');
+
+
                 if (correct === 5) {
                     alert('CORRECT! \n You won!')//TODO
                     location.reload();
@@ -104,13 +105,22 @@ async function init() {
             let y = testArr.indexOf(matchesYell[i]);
             if (y >= 0) {
                 x.push(y);
-                delete testArr[y];
+                testArr[y] = '-';
             }
         }
-        console.log(testArr)
+
         for (i = 0; i < x.length; i++) {
             let y = x[i];
             letters[y + attCounter].style.backgroundColor = '#998200';
+
+        }
+        for (let i = 0; i < testArr.length; i++) {
+            let element = testArr[i];
+            let test = testArr1.indexOf(element);
+            if (element.match(/^[\p{Letter}]$/u) && test === -1) {
+                let greyOut = document.getElementById(element);
+                greyOut.style.backgroundColor = '#485c2e';
+            }
         }
         attCounter += 5;
         if (attCounter === 30 && correct != 5) {
