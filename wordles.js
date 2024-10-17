@@ -21,8 +21,13 @@ async function init() {
     onScrnKbrd.addEventListener('click', onScrnKbrd => {
         if (onScrnKbrd.target.innerHTML === 'Enter') {
             if (currentGuess.length === 5) {
+                onScrnKbrd.target.disabled = true;
+                document.getElementById('bcksSp').disabled = true;
                 commitWord();
             }
+            setTimeout(() => { onScrnKbrd.target.disabled = false; }, 3000)
+            setTimeout(() => { document.getElementById('bcksSp').disabled = false; }, 2000)
+
         }
         else if (onScrnKbrd.target.innerHTML === 'Bckspc') {
             bckspace();
