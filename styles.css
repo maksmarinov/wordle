@@ -69,6 +69,10 @@ button {
     width: 55px;
 }
 
-.colors {
-    color: #485c2e;
+.inv {
+    margin-bottom: 2px;
+    background-color: rgb(224, 241, 67);
+    visibility: hidden;
+    font-weight: bold;
+    color: black;
 }

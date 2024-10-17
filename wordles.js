@@ -1,6 +1,7 @@
 
 const letters = document.querySelectorAll('.letter');
 const onScrnKbrd = document.getElementById('kbrd');
+const warning = document.getElementById('invalidWord');
 async function init() {
 
     let counter = 0;
@@ -23,8 +24,8 @@ async function init() {
                 document.getElementById('bcksSp').disabled = true;
                 commitWord();
             }
-            setTimeout(() => { onScrnKbrd.target.disabled = false; }, 3000)
-            setTimeout(() => { document.getElementById('bcksSp').disabled = false; }, 2000)
+            setTimeout(() => { onScrnKbrd.target.disabled = false; }, 2000)
+            setTimeout(() => { document.getElementById('bcksSp').disabled = false; }, 1000)
 
         }
         else if (onScrnKbrd.target.innerHTML === 'Bckspc') {
@@ -59,7 +60,9 @@ async function init() {
         const resObj = await res.json();
         const validWord = resObj.validWord;
         if (!validWord) {
-            console.log('not a word!') //TODO 
+            warning.style.visibility = 'visible';
+            setTimeout(() => { warning.style.visibility = 'hidden'; }, 2000)
+
         }
         else {
             let attempt = Array.from(currentGuess.toUpperCase());
