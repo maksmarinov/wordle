@@ -86,15 +86,13 @@ async function init() {
         let correct = 0;
         let testArr = [];
         let testArr1 = [];
+
         for (i = 0; i < 5; i++) {
             if (myWord[i] === wordOTD[i]) {
                 letters[boxN].style.backgroundColor = '#115204';
                 correct++;
                 testArr.push('-');
                 testArr1.push('+');
-                if (correct === 5) {
-                    winner.style.visibility = 'visible';//TODO
-                }
             }
             else if (myWord[i] != wordOTD[i]) {
                 testArr.push(myWord[i]);
@@ -133,6 +131,10 @@ async function init() {
         if (attCounter === 30 && correct != 5) {
             lost.innerHTML = 'WORD WAS: ' + word;
             lost.style.visibility = 'visible';
+        }
+        if (myWord === wordOTD) {
+            winner.style.visibility = 'visible';//TODO
+            return;
         }
     }
 }
