@@ -6,8 +6,9 @@ const refreshW = document.getElementById('refresh');
 const newWordLoad = document.getElementById('new');
 const winner = document.getElementById('win');
 const lost = document.getElementById('loss');
-async function init() {
 
+async function init() {
+    let winCond = 0;
     let counter = 0;
     let boxN = 0;
     let attCounter = 0;
@@ -17,7 +18,7 @@ async function init() {
     const resObj = await res.json();
     const word = resObj.word.toUpperCase();
     const wordParts = Array.from(word);
-
+    console.log(word)
     refreshW.addEventListener('click', () => {
         newWordLoad.style.visibility = 'visible';
         setTimeout(() => { newWordLoad.style.visibility = 'hidden'; }, 1000)
@@ -38,7 +39,7 @@ async function init() {
         else if (onScrnKbrd.target.innerHTML === 'Bckspc') {
             bckspace();
         }
-        else if (onScrnKbrd.target.innerHTML.match(/^[\p{Letter}]$/u)) {
+        else if (onScrnKbrd.target.innerHTML.match(/^[\p{Letter}]$/u) && winCond != 1) {
             inputLetters(onScrnKbrd.target.innerHTML);
         }
 
@@ -86,13 +87,17 @@ async function init() {
         let correct = 0;
         let testArr = [];
         let testArr1 = [];
-
+        let x = []
         for (i = 0; i < 5; i++) {
             if (myWord[i] === wordOTD[i]) {
                 letters[boxN].style.backgroundColor = '#115204';
                 correct++;
                 testArr.push('-');
                 testArr1.push('+');
+                if (correct === 5) {
+                    winner.style.visibility = 'visible';//TODO
+                    winCond = 1;
+                }
             }
             else if (myWord[i] != wordOTD[i]) {
                 testArr.push(myWord[i]);
@@ -103,8 +108,6 @@ async function init() {
         }
         const matchesYell = testArr1.filter(element => testArr.includes(element));
 
-        let x = []
-
         for (i = 0; i < matchesYell.length; i++) {
             let y = testArr.indexOf(matchesYell[i]);
             if (y >= 0) {
@@ -112,18 +115,15 @@ async function init() {
                 testArr[y] = '-';
             }
         }
-
         for (i = 0; i < x.length; i++) {
             let y = x[i];
             letters[y + attCounter].style.backgroundColor = '#998200';
         }
-
         for (let i = 0; i < testArr.length; i++) {
             let element = testArr[i];
             let test = wordParts.indexOf(element);
             if (element.match(/^[\p{Letter}]$/u) && test === -1) {
                 let greyOut = document.getElementById(element);
-
                 greyOut.style.backgroundColor = '#485c2e';
             }
         }
@@ -131,10 +131,6 @@ async function init() {
         if (attCounter === 30 && correct != 5) {
             lost.innerHTML = 'WORD WAS: ' + word;
             lost.style.visibility = 'visible';
-        }
-        if (myWord === wordOTD) {
-            winner.style.visibility = 'visible';//TODO
-            return;
         }
     }
 }
