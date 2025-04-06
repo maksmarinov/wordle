@@ -1,0 +1,154 @@
+main {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  padding: 4px;
+  width: 100%;
+  background: #00032b;
+}
+body {
+  color: whitesmoke;
+  touch-action: pan-x pan-y;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  padding: 2;
+  margin: 10;
+  font-weight: 900;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  font-size: 48px;
+  background-color: rgb(24, 23, 23, 20%);
+}
+
+.app {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
+  max-height: fit-content;
+  text-align: center;
+  max-width: 320px;
+}
+
+.attempts {
+  left: 50%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 8px;
+}
+
+.letter {
+  display: flex;
+  min-width: 50px;
+  min-height: 50px;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 600;
+  color: rgb(233, 233, 233);
+  background-color: #000853;
+  border: 1px;
+  border-radius: 2px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+button {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 25px;
+  height: 35px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(22, 52, 117);
+}
+button:active {
+  background-color: aliceblue;
+  color: #000853;
+}
+button:hover {
+  background-color: aliceblue;
+  color: #000853;
+}
+
+.backs {
+  background-color: black;
+  color: rgb(207, 207, 207);
+  width: 55px;
+  font-weight: 700;
+}
+
+.enter {
+  color: rgb(0, 0, 0);
+  background-color: #808080;
+  width: 55px;
+  font-weight: 700;
+}
+
+.in {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 20%;
+  right: 20%;
+  text-align: center;
+}
+
+#invalidWord {
+  background-color: rgb(224, 241, 67);
+  visibility: hidden;
+  font-weight: bold;
+  color: black;
+}
+
+#refresh {
+  padding: 4px;
+  margin-top: auto;
+  width: fit-content;
+  height: fit-content;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#new {
+  visibility: hidden;
+  background-color: rgb(55, 0, 255);
+}
+
+#win {
+  visibility: hidden;
+  background-color: rgb(0, 116, 39);
+  font-size: larger;
+}
+
+#loss {
+  visibility: hidden;
+  background-color: rgb(255, 230, 0);
+  color: black;
+  font-size: larger;
+}
+#refresh:hover {
+  background-color: aliceblue;
+  color: #000853;
+}
+#refresh:active {
+  background-color: aliceblue;
+  color: #000853;
+}
